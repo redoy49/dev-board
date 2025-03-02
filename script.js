@@ -28,9 +28,19 @@ for (const completedBtn of completedBtns) {
     const buttonMainContainer = buttonContainer.parentElement;
     const title = buttonMainContainer.querySelector("h2").innerText;
 
-    const todayDateResult = todayDateFun();
+   
 
-    p.innerText = `You have Complete The Task ${title} at ${todayDateResult.todayTime} PM`;
+    const date = new Date();
+    const hour = date.getHours();
+    let minute = date.getMinutes();
+    const second = date.getSeconds();
+    const amOrPm = hour < 12? 'AM': 'PM';
+    console.log(amOrPm);
+    
+
+
+    const todayTime = date.toTimeString().split(" ")[0]; // "11:22:29"
+    p.innerText = `You have Complete The Task ${title} at ${todayTime} PM`;
   });
 }
 
@@ -46,19 +56,12 @@ document.getElementById("discover").addEventListener("click", function () {
   window.location.href = "page/blog.html";
 });
 
-function todayDateFun() {
-  const date = new Date();
-  const todayDate = date.toDateString(); // "Sun Mar 02 2025"
-  const todayTime = date.toTimeString().split(" ")[0]; // "11:22:29"
-  return { todayDate, todayTime };
-}
-
-const todayDateShow = todayDateFun();
-
-console.log(todayDateShow.todayTime);
+// Show today date
+const date = new Date();
+const todayDate = date.toDateString(); // "Sun Mar 02 2025"
 
 const ajkerDate = document.getElementById("ajker-date");
-ajkerDate.innerText = todayDateShow.todayDate;
+ajkerDate.innerText = todayDate;
 console.log(ajkerDate.innerText);
 
 // Change Background Color
@@ -69,5 +72,4 @@ document.getElementById("change-color").addEventListener("click", function () {
 
   const changeColor = `rgb(${red}, ${green}, ${blue})`;
   document.body.style.backgroundColor = changeColor;
-  console.log(changeColor);
 });
