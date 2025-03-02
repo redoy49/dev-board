@@ -86,3 +86,5 @@ document.getElementById("change-color").addEventListener("click", function () {
   const changeColor = `rgb(${red}, ${green}, ${blue})`;
   document.body.style.backgroundColor = changeColor;
 });
+
+
