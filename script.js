@@ -9,10 +9,19 @@ const title = document.getElementById("title").innerText;
 
 const activityContainer = document.getElementById("activity-container");
 
+let count = 0;
+
 for (const completedBtn of completedBtns) {
   completedBtn.addEventListener("click", function (event) {
     alert("Board Update Successfully");
     event.target.disabled = true;
+
+    // second alert
+    count = count + 1;
+    if(count === 6) {
+      alert('Congratlation');
+    }
+    
 
     let convertTaskNumber = parseInt(taskNumber.innerText);
     let convertDoneNumber = parseInt(doneNumber.innerText);
@@ -28,19 +37,23 @@ for (const completedBtn of completedBtns) {
     const buttonMainContainer = buttonContainer.parentElement;
     const title = buttonMainContainer.querySelector("h2").innerText;
 
-   
-
+    // current time
     const date = new Date();
-    const hour = date.getHours();
-    let minute = date.getMinutes();
+    let hour = date.getHours();
+    const minute = date.getMinutes();
     const second = date.getSeconds();
-    const amOrPm = hour < 12? 'AM': 'PM';
-    console.log(amOrPm);
-    
 
+    const amOrPm = hour < 12 ? "AM" : "PM";
 
-    const todayTime = date.toTimeString().split(" ")[0]; // "11:22:29"
-    p.innerText = `You have Complete The Task ${title} at ${todayTime} PM`;
+    if (hour === 0) {
+      hour = 12;
+    } else if (hour > 12) {
+      hour = hour - 12;
+    }
+
+    const realTime = `${hour}:${minute}:${second} ${amOrPm}`;
+    // const todayTime = date.toTimeString().split(" ")[0]; // "11:22:29"
+    p.innerText = `You have Complete The Task ${title} at ${realTime}`;
   });
 }
 
