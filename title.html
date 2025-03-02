@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Click Event</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="card-container">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>Description of Card 1</p>
+            <button>Click Me</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Description of Card 2</p>
+            <button>Click Me</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Description of Card 3</p>
+            <button>Click Me</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 4</h3>
+            <p>Description of Card 4</p>
+            <button>Click Me</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 5</h3>
+            <p>Description of Card 5</p>
+            <button>Click Me</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 6</h3>
+            <p>Description of Card 6</p>
+            <button>Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        // Event delegation: Add event listener to the parent container
+        document.getElementById("card-container").addEventListener("click", (event) => {
+            let btn = event.target; // Get the clicked element
+
+            // Check if the clicked element is a button
+            if (btn.tagName === "BUTTON") {
+                let card = btn.parentElement; // Move up to the parent card
+                let title = card.querySelector("h3").innerText; // Get title dynamically
+                alert(`You clicked: ${title}`);
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+document.getElementById("card-container").addEventListener("click", (event) => {
+  let clickedElement = event.target; // Get the element that was clicked
+
+  if (clickedElement.tagName === "BUTTON") { // Check if it's a button
+      let card = clickedElement.parentElement; // Get the parent card
+      let title = card.querySelector("h3").innerText; // Get the title text
+      alert(title); // Show the title in an alert
+  }
+});
+
+
+method 3
+document.getElementById("card-container").addEventListener("click", function(event) {
+  if (event.target.tagName === "BUTTON") { // Check if a button was clicked
+      let card = event.target.parentElement; // Get the parent card
+      let title = card.querySelector("h3").innerText; // Get the title
+      alert(title); // Show the title
+  }
+});
+
+method 4
+using onClick and function
+function showTitle(cardTitle) {
+  document.getElementById('card-title').innerText = "You clicked: " + cardTitle;
+}
