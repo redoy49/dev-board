@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Board</title>
-    <!-- CSS style -->
     <link rel="stylesheet" href="style.css" />
-    <!-- DaisyUI CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
       rel="stylesheet"
@@ -16,15 +14,11 @@
   </head>
   <body class="bg-[#F4F7FF] p-8">
     <header class="bg-white max-w-screen-2xl mx-auto rounded-2xl">
-      <!-- Nav section -->
       <nav class="h-24 flex justify-between items-center px-6 mb-6">
-        <!-- Nav Left side -->
         <div class="flex items-center">
           <img class="h-12 mr-3" src="assets/logo.png" alt="" />
           <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
         </div>
-
-        <!-- Nav Right side -->
         <div class="flex justify-between">
           <div
             class="flex items-center bg-[#F4F7FF] rounded-full px-3 py- mr-9"
@@ -32,21 +26,19 @@
             <img class="w-7 h-7 mr-2" src="assets/checkbox.png" alt="" />
             <span class="text-[26px] font-bold" id="done-number">23</span>
           </div>
-          <div id="change-color" class="bg-[#F4F7FF] p-2 rounded-full cursor-pointer">
+          <div
+            id="change-color"
+            class="bg-[#F4F7FF] p-2 rounded-full cursor-pointer"
+          >
             <img class="w-8 h-8" src="assets/theme-btn.png" alt="" srcset="" />
           </div>
         </div>
       </nav>
     </header>
-    <!-- Main section -->
     <main class="max-w-screen-2xl mx-auto">
-      <!-- Div container -->
       <div class="flex gap-6">
-        <!-- Task assigned section -->
         <div class="w-3/4 h-3/4 bg-[#FFFFFF] p-6 rounded-2xl">
-          <!-- First div -->
           <div class="flex gap-6 pb-8">
-            <!-- Left side -->
             <div
               class="flex items-center gap-5 w-1/4 bg-[#F4F7FF] p-8 rounded-xl"
             >
@@ -58,7 +50,6 @@
                 <p class="font-bold text-3xl" id="task-number">6</p>
               </div>
             </div>
-            <!-- Middle side -->
             <div
               id="discover"
               class="flex items-center gap-5 w-[524px] bg-gradient-to-r from-[#3752fd] via-[#6b7ffa] to-[#9aa7f7] p-8 rounded-xl text-white text-2xl cursor-pointer"
@@ -73,27 +64,20 @@
                 </p>
               </div>
             </div>
-            <!-- Right side -->
             <div
-              class="flex items-center gap-5 w-1/4 bg-[#F4F7FF] p-8 rounded-xl"
+              class="flex items-center gap-5 w-1/4 bg-[#F4F7FF] p-7 rounded-xl"
             >
               <div class="bg-white p-4 rounded-full">
                 <img class="h-7 w-7" src="assets/calender.png" alt="" />
               </div>
               <div>
-                <p class="font-medium" id="ajker-date">
-                  <!-- <span class="opacity-80">Wed ,</span><br />
-                  <span class="font-bold text-xl">Jul 28 2025</span> -->
-                </p>
+                <p class="font-semibold text-[18px]" id="ajker-date"></p>
               </div>
             </div>
           </div>
 
           <div class="border-b-2 border-dashed border-gray-300"></div>
-
-          <!-- Card section -->
           <div class="grid gap-9 grid-cols-3 grid-rows-2 pt-8">
-            <!-- card 01 -->
             <div class="card bg-[#F4F7FF] shadow-sm rounded-lg">
               <div class="card-body">
                 <div>
@@ -130,7 +114,6 @@
                 </div>
               </div>
             </div>
-            <!-- card 02 -->
             <div class="card bg-[#F4F7FF] shadow-sm rounded-lg">
               <div class="card-body">
                 <div>
@@ -164,7 +147,6 @@
                 </div>
               </div>
             </div>
-            <!-- card 03 -->
             <div class="card bg-[#F4F7FF] shadow-sm rounded-lg">
               <div class="card-body">
                 <div>
@@ -198,7 +180,6 @@
                 </div>
               </div>
             </div>
-            <!-- card 04 -->
             <div class="card bg-[#F4F7FF] shadow-sm rounded-lg">
               <div class="card-body">
                 <div>
@@ -232,7 +213,6 @@
                 </div>
               </div>
             </div>
-            <!-- card 05 -->
             <div class="card bg-[#F4F7FF] shadow-sm rounded-lg">
               <div class="card-body">
                 <div>
@@ -266,7 +246,6 @@
                 </div>
               </div>
             </div>
-            <!-- card 06 -->
             <div class="card bg-[#F4F7FF] shadow-sm rounded-lg">
               <div class="card-body">
                 <div>
@@ -303,7 +282,6 @@
           </div>
         </div>
 
-        <!-- Right section -->
         <div class="flex flex-col w-1/4 min-h-3/4 bg-white p-6 rounded-2xl">
           <div class="flex justify-center items-center">
             <img class="mr-4 my-4" src="assets/activity.png" alt="" />
@@ -318,7 +296,6 @@
             </button>
           </div>
           <div class="border-b-2 border-dashed border-gray-300 mt-4 mb-6"></div>
-          <!-- Activity container -->
           <div id="activity-container"></div>
         </div>
       </div>

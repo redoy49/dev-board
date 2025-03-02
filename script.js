@@ -16,12 +16,10 @@ for (const completedBtn of completedBtns) {
     alert("Board Update Successfully");
     event.target.disabled = true;
 
-    // second alert
     count = count + 1;
     if(count === 6) {
-      alert('Congratlation');
+      alert('Congrates! You have completed all the current task');
     }
-    
 
     let convertTaskNumber = parseInt(taskNumber.innerText);
     let convertDoneNumber = parseInt(doneNumber.innerText);
@@ -52,32 +50,27 @@ for (const completedBtn of completedBtns) {
     }
 
     const realTime = `${hour}:${minute}:${second} ${amOrPm}`;
-    // const todayTime = date.toTimeString().split(" ")[0]; // "11:22:29"
     p.innerText = `You have Complete The Task ${title} at ${realTime}`;
   });
 }
 
-// Activity Log
 document
   .getElementById("clear-history-btn")
   .addEventListener("click", function () {
     activityContainer.innerHTML = "";
   });
 
-// Discover something
 document.getElementById("discover").addEventListener("click", function () {
   window.location.href = "page/blog.html";
 });
 
-// Show today date
 const date = new Date();
-const todayDate = date.toDateString(); // "Sun Mar 02 2025"
+const todayDate = date.toDateString();
 
 const ajkerDate = document.getElementById("ajker-date");
 ajkerDate.innerText = todayDate;
 console.log(ajkerDate.innerText);
 
-// Change Background Color
 document.getElementById("change-color").addEventListener("click", function () {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);

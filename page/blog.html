@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Board</title>
-    <!-- CSS style -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- DaisyUI CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
       rel="stylesheet"
@@ -16,15 +14,11 @@
   </head>
   <body class="bg-[#F4F7FF] p-8">
     <header class="bg-white max-w-screen-2xl mx-auto rounded-2xl">
-      <!-- Nav section -->
       <nav class="h-24 flex justify-between items-center px-6 mb-6">
-        <!-- Nav Left side -->
         <div class="flex items-center">
           <img class="h-12 mr-3" src="../assets/logo.png" alt="" />
           <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
         </div>
-
-        <!-- Nav Right side -->
         <div>
           <button
             id="back-btn"
@@ -35,34 +29,66 @@
         </div>
       </nav>
     </header>
-    <!-- Main section -->
     <main class="max-w-screen-2xl mx-auto">
       <h1 class="font-bold text-center text-4xl mb-4">Blogs</h1>
       <div>
         <div class="p-4 bg-white rounded-xl mb-6">
-          <h2 class="font-bold">Question-1: What are the different ways to select an element in the DOM?</h2>
+          <h2 class="font-bold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h2>
           <div class="border-b-2 border-dashed border-gray-300 mt-4 mb-6"></div>
-          <p>There are many way to select an element in DOM. Such as getElementByTagName(), getElementById(), getElementsByClassName(), querySelector(), querySelectorAll() etc. </p>
+          <p>
+            There are many way to select an element in DOM. Such as
+            getElementByTagName(), getElementById(), getElementsByClassName(),
+            querySelector(), querySelectorAll() etc.
+          </p>
         </div>
         <div class="p-4 bg-white rounded-xl mb-6">
-          <h2 class="font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+          <h2 class="font-bold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h2>
           <div class="border-b-2 border-dashed border-gray-300 mt-4 mb-6"></div>
-          <p>The difference between innerHTML, innerText and textContent is innerHTML return content with tagname, innerText gives only visible text, textContent gives visible and hidden all text.</p>
+          <p>
+            The difference between innerHTML, innerText and textContent is
+            innerHTML return content with tagname, innerText gives only visible
+            text, textContent gives visible and hidden all text.
+          </p>
         </div>
         <div class="p-4 bg-white rounded-xl mb-6">
-          <h2 class="font-bold">Question-3: What is event delegation in the DOM?</h2>
+          <h2 class="font-bold">
+            Question-3: What is event delegation in the DOM?
+          </h2>
           <div class="border-b-2 border-dashed border-gray-300 mt-4 mb-6"></div>
-          <p>Event delegation is process when I add single event listener to parent element and it handle event for all child element. dont need to add event listener for each child separately. </p>
+          <p>
+            Event delegation is process when I add single event listener to
+            parent element and it handle event for all child element. dont need
+            to add event listener for each child separately.
+          </p>
         </div>
         <div class="p-4 bg-white rounded-xl mb-6">
-          <h2 class="font-bold">Question-4: What is event bubbling in the DOM?</h2>
+          <h2 class="font-bold">
+            Question-4: What is event bubbling in the DOM?
+          </h2>
           <div class="border-b-2 border-dashed border-gray-300 mt-4 mb-6"></div>
-          <p>Event bubbling is when an event, like a click, starts at the item I clicked and then bubbles up to its parents, and their parents, and so on right up to the top.</p>
+          <p>
+            Event bubbling is when an event, like a click, starts at the item I
+            clicked and then bubbles up to its parents, and their parents, and
+            so on right up to the top.
+          </p>
         </div>
         <div class="p-4 bg-white rounded-xl mb-6">
-          <h2 class="font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+          <h2 class="font-bold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h2>
           <div class="border-b-2 border-dashed border-gray-300 mt-4 mb-6"></div>
-          <p>I create element using document.createElement(), then set inner text. Then adding element using appendChild(), I remove element using removeChild()</p>
+          <p>
+            I create element using document.createElement(), then set inner
+            text. Then adding element using appendChild(), I remove element
+            using removeChild()
+          </p>
         </div>
       </div>
     </main>
