@@ -1,14 +1,10 @@
 const completedBtns = document.querySelectorAll("#completed-btn");
-
 const taskNumber = document.getElementById("task-number");
 const doneNumber = document.getElementById("done-number");
-
-const changeText = document.getElementById("change-text");
-
-const title = document.getElementById("title").innerText;
-
 const activityContainer = document.getElementById("activity-container");
 
+const changeText = document.getElementById("change-text");
+const title = document.getElementById("title").innerText;
 let count = 0;
 
 for (const completedBtn of completedBtns) {
@@ -35,12 +31,10 @@ for (const completedBtn of completedBtns) {
     const buttonMainContainer = buttonContainer.parentElement;
     const title = buttonMainContainer.querySelector("h2").innerText;
 
-    // current time
     const date = new Date();
     let hour = date.getHours();
     const minute = date.getMinutes();
     const second = date.getSeconds();
-
     const amOrPm = hour < 12 ? "AM" : "PM";
 
     if (hour === 0) {
@@ -69,7 +63,6 @@ const todayDate = date.toDateString();
 
 const ajkerDate = document.getElementById("ajker-date");
 ajkerDate.innerText = todayDate;
-console.log(ajkerDate.innerText);
 
 document.getElementById("change-color").addEventListener("click", function () {
   const red = Math.floor(Math.random() * 256);
